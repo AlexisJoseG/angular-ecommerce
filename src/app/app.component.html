@@ -1,0 +1,32 @@
+<div class="min-h-screen flex flex-col bg-slate-50 selection:bg-brand-accent/20">
+  <!-- Top Navigation Header -->
+  <app-navbar />
+
+  <!-- Main View Router Outlet -->
+  <div class="flex-1">
+    <router-outlet />
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#0C63E7] text-blue-100 py-10 border-t border-blue-600/60 mt-auto shadow-inner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-white/20 border border-white/30 flex items-center justify-center text-white text-[10px] font-bold shadow-sm">
+          A
+        </div>
+        <span class="text-white font-semibold">Apex Store Catalog</span>
+        <span class="text-blue-200/60">•</span>
+        <span class="text-blue-100/90">Powered by Platzi Fake Store API</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-blue-100/80">
+        <span>Angular 19 Standalone Architecture</span>
+        <span class="text-blue-200/60">•</span>
+        <span>Tailwind CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notifications -->
+  <app-notification-toast />
+</div>
