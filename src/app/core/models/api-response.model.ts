@@ -5,9 +5,11 @@ export interface AppError {
   path?: string;
 }
 
+export type NotificationType = 'success' | 'error' | 'info' | 'warning';
+
 export interface ToastNotification {
   id: string;
-  type: 'success' | 'error' | 'info' | 'warning';
+  type: NotificationType;
   message: string;
   duration?: number;
 }

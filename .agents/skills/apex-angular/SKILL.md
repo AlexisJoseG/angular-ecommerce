@@ -47,6 +47,7 @@ module.exports = {
           secondary: '#184322',  // Estructuras / Tarjetas / Navbars / Bordes oscuros
           accent: '#036666',     // Acciones, botones primarios, focus rings, badges activos
           surface: '#EBF2FA',    // Fondos claros, textos de alto contraste, badges neutros
+          success: '#2ECC71',    // Verde Esmeralda / Éxito / Notificaciones y estados
         }
       }
     }

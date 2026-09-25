@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit, inject, signal } from '@ang
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { CatalogService } from '../../../core/services/catalog.service';
+import { CartService } from '../../../core/services/cart.service';
 import { NotificationService } from '../../../core/services/notification.service';
 import { Product } from '../../../core/models/product.model';
 import { PriceFormatPipe } from '../../../shared/pipes/price-format.pipe';
@@ -202,6 +203,7 @@ export class ProductDetailPageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly catalogService = inject(CatalogService);
+  private readonly cartService = inject(CartService);
   private readonly notificationService = inject(NotificationService);
 
   readonly product = signal<Product | null>(null);
@@ -247,6 +249,7 @@ export class ProductDetailPageComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
+    this.cartService.addItem(product, this.quantity());
     const total = product.price * this.quantity();
     this.notificationService.success(
       `¡Agregado! ${this.quantity()}x "${product.title}" por $${total.toFixed(2)} al carrito.`

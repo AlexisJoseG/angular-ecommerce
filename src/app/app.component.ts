@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotificationToastComponent } from './shared/components/notification-toast/notification-toast.component';
+import { CartDrawerComponent } from './shared/components/cart-drawer/cart-drawer.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { NotificationToastComponent } from './shared/components/notification-toa
   imports: [
     RouterOutlet,
     NavbarComponent,
-    NotificationToastComponent
+    NotificationToastComponent,
+    CartDrawerComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
@@ -18,3 +20,4 @@ import { NotificationToastComponent } from './shared/components/notification-toa
 export class AppComponent {
   title = 'Platzi Catalog | Apex Store';
 }
+
